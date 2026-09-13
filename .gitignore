@@ -1,0 +1,23 @@
+# Secrets and local runtime state
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+BRIEF.md
+codex_err.txt
+codex_out.md
+demo/.runtime/
+demo/receipts/*.private.json
+
+# Generated dependencies and build output
+node_modules/
+packages/*/node_modules/
+packages/*/dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
