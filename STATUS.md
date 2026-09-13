@@ -1,16 +1,21 @@
 # Tiba Mandate — status
 
-## Milestone 1 of 5: repository foundation
+## Milestone 2 of 5: v0.1 specification and schemas
 
 What works:
 
-- Local Git repository initialized; no remote is configured or used.
-- Secret-safe `.gitignore` and `.env.example` are in place.
-- The existing Tiba source was audited. Its `solana-rail` local branch contains a reusable devnet USDC settlement module; the currently checked-out branch is Sui-only.
+- `SPEC.md` defines the v0.1 Mandate, Receipt, signed delegation chain,
+  revocation model, JCS + Ed25519/did:key verification, error handling, and
+  privacy boundaries.
+- `schema/` contains JSON Schema 2020-12 documents for mandates, receipts,
+  and signed revocation lists.
+- Receipts carry a complete signed mandate chain, so an offline verifier can
+  validate authorization without a Tiba service.
 
 How to run:
 
-- This milestone has no executable artifact yet. The next milestones add the verifier packages, guard, payment adapter, and demo.
+- Read [SPEC.md](SPEC.md) or validate the JSON schema files with any
+  Draft 2020-12 compatible JSON Schema validator.
 
 Safety:
 
