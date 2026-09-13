@@ -138,7 +138,7 @@ currently authorized parent agent for a sub-mandate) and authorizes exactly one
 | `id` | Globally unique mandate identifier in the issuer's domain. UUID URNs are recommended. |
 | `issuer` | `did:key` of the policy author or delegating agent. |
 | `subject` | `did:key` of the only agent permitted to use this mandate. |
-| `issued_at`, `not_before`, `expires_at` | UTC RFC 3339 timestamps. Missing `not_before` means `issued_at`. `expires_at` is exclusive. |
+| `issued_at`, `not_before`, `expires_at` | Calendar-valid UTC timestamps in exact `YYYY-MM-DDTHH:mm:ss.sssZ` form. Missing `not_before` means `issued_at`. `expires_at` is exclusive. |
 | `scope` | Permitted actions, counterparties, and data references. It is deliberately explicit and closed by default. |
 | `budget` | Optional ceiling in one currency. If absent, no monetary action is authorized. |
 | `delegation` | Maximum remaining delegation depth and, for a child, its immutable parent reference. |
@@ -358,6 +358,7 @@ stronger when a signed status list and complete receipt ledger are supplied.
 | `TIBA_ESCALATION_REQUIRED` | Policy requires human confirmation before proceeding. |
 | `TIBA_UNSUPPORTED_CONSTRAINT` | A security-relevant extension or constraint is unknown. |
 | `TIBA_RECEIPT_MANDATE_MISMATCH` | Receipt active-mandate identifiers or actor do not match its chain. |
+| `TIBA_AUDIT_PERSISTENCE_FAILED` | A completed action's signed receipt could not be durably stored; the middleware MUST return that signed receipt rather than relabel the completed action as failed. |
 
 ## 10. MCP and A2A transport bindings
 
@@ -387,7 +388,9 @@ proxy uses the provisional reverse-DNS metadata key `org.tiba/mandate`:
 ```
 
 `<full signed root mandate>` above means a JSON Mandate object, not a string in
-an actual request; it is quoted only to keep the example short. A guard MUST
+an actual request; it is quoted only to keep the example short. A deployment
+MUST bind the chain to a trusted session or validate the metadata chain before
+using it; it MUST NOT trust an LLM-generated action label. A guard MUST
 derive `resource`, `tool`, counterparty, and data references from trusted
 server configuration and the request, not from an LLM-provided label. It checks
 the mandate before forwarding. On a deny it MUST not call the upstream server,
@@ -435,6 +438,9 @@ For x402, the HTTP payment request/response remains exactly x402. Tiba may
 record an action with `protocol: "x402"` and evidence references to the selected
 payment requirement, payment payload, and settlement response using hashes.
 The x402 facilitator remains responsible for x402 verification and settlement.
+The reference proof limits this to a loopback seller and Solana devnet,
+requires an explicit devnet confirmation, and signs the successful settlement
+as a normal Tiba receipt.
 
 For AP2, a Tiba payment action may refer to an AP2 `transaction_id`, checkout
 mandate hash, or payment receipt hash in `evidence`; it MUST NOT copy payment

@@ -1,0 +1,21 @@
+{
+  "name": "tiba-mandate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test:js": "npm run test --workspaces --if-present",
+    "test:py": "cd packages/verifier-py && python -m unittest discover -s tests -v",
+    "test:interop": "node --test test/*.test.mjs",
+    "test": "npm run test:js && npm run test:py && npm run test:interop",
+    "demo": "node demo/run.mjs",
+    "verify:demo": "node demo/verify-receipts.mjs"
+  },
+  "engines": {
+    "node": ">=22",
+    "python": ">=3.10"
+  }
+}

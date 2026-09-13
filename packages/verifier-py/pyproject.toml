@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiba-verifier"
+version = "0.1.0"
+description = "Dependency-light Python verifier for Tiba v0.1 mandates and receipts"
+requires-python = ">=3.10"
+dependencies = ["cryptography>=41"]

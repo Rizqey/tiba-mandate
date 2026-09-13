@@ -78,8 +78,8 @@
     "timestamp": {
       "type": "string",
       "format": "date-time",
-      "pattern": "Z$",
-      "maxLength": 40
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$",
+      "maxLength": 24
     },
     "hash": {
       "type": "string",
