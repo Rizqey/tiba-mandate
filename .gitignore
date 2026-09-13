@@ -8,6 +8,7 @@ BRIEF.md
 codex_err.txt
 codex_out.md
 demo/.runtime/
+demo/receipts/**/guard-internal/
 demo/receipts/*.private.json
 
 # Generated dependencies and build output

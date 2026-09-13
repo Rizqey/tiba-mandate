@@ -1,0 +1,12 @@
+{
+  "name": "@tiba/mcp-guard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@tiba/verifier": "file:../verifier-ts"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}

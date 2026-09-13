@@ -1,0 +1,18 @@
+{
+  "name": "@tiba/solana-payment",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/settlement.mjs",
+    "./mandated-payment": "./src/mandated-payment.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@tiba/verifier": "file:../verifier-ts",
+    "@solana/spl-token": "^0.4.15",
+    "@solana/web3.js": "^1.98.4"
+  }
+}
