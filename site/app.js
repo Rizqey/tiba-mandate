@@ -223,7 +223,7 @@
       setResult(
         "success",
         "Signature valid",
-        "The receipt and its " + chainLength + " embedded mandate " + (chainLength === 1 ? "signature" : "signatures") + " verify against their Ed25519 did:key signers."
+        "The receipt and its " + chainLength + " embedded mandate " + (chainLength === 1 ? "signature" : "signatures") + " verify against their Ed25519 did:key signers. This confirms signature integrity only; it does not establish signer identity, trust, or current authorization."
       );
     } catch (error) {
       receiptInput.setAttribute("aria-invalid", "true");
