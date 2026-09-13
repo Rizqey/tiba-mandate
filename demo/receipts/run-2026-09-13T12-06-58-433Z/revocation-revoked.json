@@ -1,0 +1,21 @@
+{
+  "type": "tiba.revocation_list",
+  "version": "0.1",
+  "id": "revocations:2026-09-13T12-06-58-433Z:1",
+  "issuer": "did:key:z6Mkk1irjFts23Q2vVkH967o2KiFFzfy7bwhfpQ2SUSPC27M",
+  "list_id": "demo",
+  "issued_at": "2026-09-13T12:07:03.835Z",
+  "next_update": "2026-09-13T12:22:03.835Z",
+  "revoked": [
+    {
+      "mandate_id": "mandate:6564c30b-da2f-4c8f-ac79-6578df1af7bb",
+      "revoked_at": "2026-09-13T12:07:03.835Z",
+      "reason": "demo complete"
+    }
+  ],
+  "signature": {
+    "alg": "Ed25519",
+    "kid": "did:key:z6Mkk1irjFts23Q2vVkH967o2KiFFzfy7bwhfpQ2SUSPC27M",
+    "value": "NjcNkHy_UQ-_6sgFDvVEn5Skho7qUyBb0H7QMlADKxWLSVmdB4WXSJAneijISU-1SfYlQ2lZaNlTMqBvM00zBg"
+  }
+}

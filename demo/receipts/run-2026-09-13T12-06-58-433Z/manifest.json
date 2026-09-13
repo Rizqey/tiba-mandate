@@ -1,0 +1,13 @@
+{
+  "run_id": "2026-09-13T12-06-58-433Z",
+  "trusted_actor": "did:key:z6Mkuq4PUnW3jWPCfVG6WSVY3kWUBoaJmSuDs72WLU2FU2WR",
+  "mandate_id": "mandate:6564c30b-da2f-4c8f-ac79-6578df1af7bb",
+  "receipt_files": [
+    "receipt-01-mcp-allowed.json",
+    "receipt-02-mcp-blocked.json",
+    "receipt-03-solana-payment.json",
+    "receipt-04-revoked.json"
+  ],
+  "devnet_transaction_signature": "2J7uwULaMZtYwQFsY2aKLjpwCXd2rZZixBjpUczJ9QHrU6PbvRzwpkkUqt6PwzhfZ5sPMuzdHw4EUPWTy7cFbLfv",
+  "devnet_explorer_url": "https://explorer.solana.com/tx/2J7uwULaMZtYwQFsY2aKLjpwCXd2rZZixBjpUczJ9QHrU6PbvRzwpkkUqt6PwzhfZ5sPMuzdHw4EUPWTy7cFbLfv?cluster=devnet"
+}

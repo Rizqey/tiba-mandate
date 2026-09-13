@@ -1,0 +1,87 @@
+{
+  "type": "tiba.receipt",
+  "version": "0.1",
+  "id": "receipt:3d2847d3-fe51-4021-84b3-421e0d694fa4",
+  "mandate_id": "mandate:6564c30b-da2f-4c8f-ac79-6578df1af7bb",
+  "mandate_hash": "sha256-Jrq8QP2lZfUyEyLjhcGI3RmCQCe82J7GeHGBdFEEbUI",
+  "executed_at": "2026-09-13T12:07:00.550Z",
+  "input_hash": "sha256-i4rsYJkCx_jJEWDqO3fXyt_Iz0Pz49XJCzT2Sfo4--4",
+  "output_hash": "sha256-2dqUXY2xK6Je6aQ7aCjFXTR65NJoLU8fQdNx8j5UONw",
+  "mandate_chain": [
+    {
+      "type": "tiba.mandate",
+      "version": "0.1",
+      "id": "mandate:6564c30b-da2f-4c8f-ac79-6578df1af7bb",
+      "issued_at": "2026-09-13T12:06:59.947Z",
+      "issuer": "did:key:z6Mkk1irjFts23Q2vVkH967o2KiFFzfy7bwhfpQ2SUSPC27M",
+      "subject": "did:key:z6Mkuq4PUnW3jWPCfVG6WSVY3kWUBoaJmSuDs72WLU2FU2WR",
+      "expires_at": "2026-09-13T13:06:59.272Z",
+      "scope": {
+        "actions": [
+          {
+            "protocol": "mcp",
+            "action": "tools/call",
+            "resource": "notes.local",
+            "tool": "notes.write"
+          },
+          {
+            "protocol": "payment",
+            "action": "transfer",
+            "resource": "solana:devnet",
+            "tool": "transfer_checked"
+          }
+        ],
+        "counterparties": [
+          "notes.local",
+          "B4Kn4DhJUyoUHU4YBRRNdSGzPSzxbhaJ3MQZswkKCMJr"
+        ],
+        "data": {
+          "read": [],
+          "write": [
+            "demo/notes"
+          ]
+        }
+      },
+      "budget": {
+        "amount": "0.001",
+        "currency": "USDC",
+        "per_action_max": "0.001"
+      },
+      "delegation": {
+        "max_depth": 0
+      },
+      "revocation": {
+        "url": "https://tiba.invalid/revocations/demo",
+        "list_id": "demo",
+        "authority": "did:key:z6Mkk1irjFts23Q2vVkH967o2KiFFzfy7bwhfpQ2SUSPC27M"
+      },
+      "escalation": {
+        "mode": "notify"
+      },
+      "signature": {
+        "alg": "Ed25519",
+        "kid": "did:key:z6Mkk1irjFts23Q2vVkH967o2KiFFzfy7bwhfpQ2SUSPC27M",
+        "value": "-crzsJxeDmWfkisB1ovhyQMsDto67PRv8MUM1nVYUSYBRF4kKY-eD1-FQPOuIPFl_jP4zCItFO_4g1uNk9aPBg"
+      }
+    }
+  ],
+  "action": {
+    "protocol": "mcp",
+    "action": "tools/call",
+    "resource": "notes.local",
+    "tool": "notes.delete",
+    "counterparty": "notes.local",
+    "data_access": {
+      "read": [],
+      "write": []
+    }
+  },
+  "result": "denied",
+  "reason": "TIBA_SCOPE_DENIED",
+  "actor": "did:key:z6Mkuq4PUnW3jWPCfVG6WSVY3kWUBoaJmSuDs72WLU2FU2WR",
+  "signature": {
+    "alg": "Ed25519",
+    "kid": "did:key:z6Mkuq4PUnW3jWPCfVG6WSVY3kWUBoaJmSuDs72WLU2FU2WR",
+    "value": "s3ujKU19RTQIgSIz6OZd-84PUbdkO89RRTdXNtEYa61FM9HGczGrbnedS0SU0KYjwP_zNf4phu3dH95Fj-SrBA"
+  }
+}

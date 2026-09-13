@@ -1,0 +1,15 @@
+{
+  "type": "tiba.revocation_list",
+  "version": "0.1",
+  "id": "revocations:2026-09-13T12-06-58-433Z:0",
+  "issuer": "did:key:z6Mkk1irjFts23Q2vVkH967o2KiFFzfy7bwhfpQ2SUSPC27M",
+  "list_id": "demo",
+  "issued_at": "2026-09-13T12:07:00.192Z",
+  "next_update": "2026-09-13T12:22:00.192Z",
+  "revoked": [],
+  "signature": {
+    "alg": "Ed25519",
+    "kid": "did:key:z6Mkk1irjFts23Q2vVkH967o2KiFFzfy7bwhfpQ2SUSPC27M",
+    "value": "f1tUR4050QuIpOU7mCZo1Ul0ISpyIazFN5xsM6YJ7rOsHsrhmA07iR0UB7mRM_MTZcwYW8aCQpbCdlSKc3YADQ"
+  }
+}

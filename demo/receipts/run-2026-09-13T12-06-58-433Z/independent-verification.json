@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "trusted_actor": "did:key:z6Mkuq4PUnW3jWPCfVG6WSVY3kWUBoaJmSuDs72WLU2FU2WR",
+  "verified_receipts": [
+    "receipt-01-mcp-allowed.json",
+    "receipt-02-mcp-blocked.json",
+    "receipt-03-solana-payment.json",
+    "receipt-04-revoked.json"
+  ]
+}

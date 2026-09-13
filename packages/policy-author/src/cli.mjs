@@ -51,6 +51,7 @@ function usage() {
     --issuer-key-file demo/.runtime/policy-author.key.json \\
     --expires-at 2026-09-20T00:00:00.000Z \\
     --out mandate.json [--provider openai|openrouter|offline|auto] [--env-file path]
+    [--offline-demo --counterparty exact-id] [--allow-offline-fallback]
 
 The CLI always prints a draft and requires SIGN on stdin before it writes a signed mandate.
 Use --offline-demo only for the deterministic local demo profile.`;

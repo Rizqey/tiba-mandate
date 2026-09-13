@@ -1,0 +1,12 @@
+{
+  "protocol": "x402",
+  "x402_network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+  "payment_status": "settled",
+  "transaction_signature": "QqeRhebjq8j8FthFrSrsb59GgRHFSAL8EYgvprmrvkXD5gBMuj8xowRCQcHVaqD6wP4qwEu5QhkP4HrZ1GKZVCN",
+  "receipt_evidence": {
+    "type": "solana_transaction",
+    "network": "solana-devnet",
+    "reference": "QqeRhebjq8j8FthFrSrsb59GgRHFSAL8EYgvprmrvkXD5gBMuj8xowRCQcHVaqD6wP4qwEu5QhkP4HrZ1GKZVCN",
+    "url": "https://explorer.solana.com/tx/QqeRhebjq8j8FthFrSrsb59GgRHFSAL8EYgvprmrvkXD5gBMuj8xowRCQcHVaqD6wP4qwEu5QhkP4HrZ1GKZVCN?cluster=devnet"
+  }
+}

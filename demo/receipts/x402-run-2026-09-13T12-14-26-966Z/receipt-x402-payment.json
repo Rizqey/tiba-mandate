@@ -1,0 +1,87 @@
+{
+  "type": "tiba.receipt",
+  "version": "0.1",
+  "id": "receipt:13e4f8d7-61a2-43a9-9ac4-b2c7205d67c3",
+  "mandate_id": "mandate:78ab69e7-a64e-4411-98ff-4af7bad977ef",
+  "mandate_hash": "sha256-CnTo583pETNHj-67svmakBfNes7AiKDTMJUSdW72t70",
+  "executed_at": "2026-09-13T12:14:41.237Z",
+  "input_hash": "sha256-I9q0omr_tLNQEb7dwSDG6e9wXq6KWZRztEJhC0L_7Fw",
+  "output_hash": "sha256-QH9cPmA8nlkTJhN_GBiRpcPvKQrqEnaGJYWZVllZtZE",
+  "mandate_chain": [
+    {
+      "type": "tiba.mandate",
+      "version": "0.1",
+      "id": "mandate:78ab69e7-a64e-4411-98ff-4af7bad977ef",
+      "issued_at": "2026-09-13T12:14:26.966Z",
+      "issuer": "did:key:z6MkhpM3QE8mFegFrPnKNpZ9Y1EEqMUcvVSHCy4WK2kvmdm8",
+      "subject": "did:key:z6MkiCZjwVzunsUHENcdN63sZsVssRecFK9f4uBs3WrCYSbz",
+      "expires_at": "2026-09-13T12:29:26.966Z",
+      "scope": {
+        "actions": [
+          {
+            "protocol": "x402",
+            "action": "http-get",
+            "resource": "x402:local",
+            "tool": "exact"
+          }
+        ],
+        "counterparties": [
+          "x402:127.0.0.1:4027"
+        ],
+        "data": {
+          "read": [],
+          "write": []
+        }
+      },
+      "budget": {
+        "amount": "0.001",
+        "currency": "USDC",
+        "per_action_max": "0.001"
+      },
+      "delegation": {
+        "max_depth": 0
+      },
+      "revocation": {
+        "url": "https://tiba.invalid/revocations/x402-proof",
+        "list_id": "x402-proof",
+        "authority": "did:key:z6MkhpM3QE8mFegFrPnKNpZ9Y1EEqMUcvVSHCy4WK2kvmdm8"
+      },
+      "escalation": {
+        "mode": "notify"
+      },
+      "signature": {
+        "alg": "Ed25519",
+        "kid": "did:key:z6MkhpM3QE8mFegFrPnKNpZ9Y1EEqMUcvVSHCy4WK2kvmdm8",
+        "value": "jKp03FrcTKfpHtDRnHow-yaFOH2mEv_pHeCIePTiSZEFJNPdgxJOQu8MvZgIoc1QszjvSWtcQaSxCnI03ctrAQ"
+      }
+    }
+  ],
+  "action": {
+    "protocol": "x402",
+    "action": "http-get",
+    "resource": "x402:local",
+    "tool": "exact",
+    "counterparty": "x402:127.0.0.1:4027",
+    "data_access": {
+      "read": [],
+      "write": []
+    },
+    "amount": "0.001",
+    "currency": "USDC"
+  },
+  "result": "success",
+  "actor": "did:key:z6MkiCZjwVzunsUHENcdN63sZsVssRecFK9f4uBs3WrCYSbz",
+  "evidence": [
+    {
+      "type": "solana_transaction",
+      "network": "solana-devnet",
+      "reference": "QqeRhebjq8j8FthFrSrsb59GgRHFSAL8EYgvprmrvkXD5gBMuj8xowRCQcHVaqD6wP4qwEu5QhkP4HrZ1GKZVCN",
+      "url": "https://explorer.solana.com/tx/QqeRhebjq8j8FthFrSrsb59GgRHFSAL8EYgvprmrvkXD5gBMuj8xowRCQcHVaqD6wP4qwEu5QhkP4HrZ1GKZVCN?cluster=devnet"
+    }
+  ],
+  "signature": {
+    "alg": "Ed25519",
+    "kid": "did:key:z6MkiCZjwVzunsUHENcdN63sZsVssRecFK9f4uBs3WrCYSbz",
+    "value": "V1gEVMMrellrvFHwmgiqspSMDan-5-s8PJ_SwTgZKr8SAQlg5e8-p2BPyFXH5nK8pJks0o34REzfMUio15NpAg"
+  }
+}
